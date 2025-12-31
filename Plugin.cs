@@ -6,6 +6,7 @@ using UNBEATAP.AP;
 using BepInEx.Configuration;
 using System;
 using UNBEATAP.Helpers;
+using unbeatAP.Patches;
 
 namespace UNBEATAP;
 
@@ -85,6 +86,7 @@ public class Plugin : BaseUnityPlugin
             Harmony.CreateAndPatchAll(typeof(ArcadeDifficultyView));
             Harmony.CreateAndPatchAll(typeof(BlockAuthentication));
             Harmony.CreateAndPatchAll(typeof(UnlockAll));
+            Harmony.CreateAndPatchAll(typeof(HUDManager));
         }
         catch(Exception e)
         {
